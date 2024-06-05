@@ -162,7 +162,7 @@ const Register = () => {
                                         "Password is too short (min 8char)",
                                 },
                                 pattern: {
-                                    //value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9])/,
+                                    value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9])/,
                                     message:
                                         "At least one uppercase,one special char and one number",
                                 },
