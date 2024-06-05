@@ -11,7 +11,7 @@ const AdminManageJobs = () => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/v1/jobs/pending-jobs')
+    axios.get('https://oims-tan.vercel.app/api/v1/jobs/pending-jobs')
         .then(response => {
             setJobs(response.data || []); // Ensure you access the correct data
             setIsLoading(false);
@@ -47,7 +47,7 @@ const UpdateJobApprove = async (id, role) => {
     const approveJob = { id };
     try {
         const response = await axios.patch(
-            `http://localhost:3000/api/v1/admin/approve-job`,
+            `https://oims-tan.vercel.app/api/v1/admin/approve-job`,
             approveJob,
             { withCredentials: true }
         );
@@ -71,7 +71,7 @@ const UpdateJobApprove = async (id, role) => {
         const updateUser = { id, role };
         try {
             const response = await axios.patch(
-                `http://localhost:3000/api/v1/admin/update-role`,
+                `https://oims-tan.vercel.app/api/v1/admin/update-role`,
                 updateUser,
                 { withCredentials: true }
             );

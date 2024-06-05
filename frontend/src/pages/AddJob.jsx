@@ -56,7 +56,7 @@ const AddJob = () => {
         try {
             //console.log(newJob)
             const response = await axios.post(
-                "http://localhost:3000/api/v1/jobs",
+                "https://oims-tan.vercel.app/api/v1/jobs",
                 newJob,
                 {
                     withCredentials: true,
